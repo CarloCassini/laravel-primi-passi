@@ -18,5 +18,8 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('home');
+
+    $random = rand(0, 100);
+
+    return view('home', compact('random'));
 });
